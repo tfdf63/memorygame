@@ -1,0 +1,266 @@
+@font-face {
+  font-family: gothic;
+  font-display: swap;
+  src: url("../fonts/gothic.woff2") format("woff2"), url("../fonts/gothic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: gothicb;
+  font-display: swap;
+  src: url("../fonts/gothicb.woff2") format("woff2"), url("../fonts/gothicb.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: gothicbi;
+  font-display: swap;
+  src: url("../fonts/gothicbi.woff2") format("woff2"), url("../fonts/gothicbi.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: gothici;
+  font-display: swap;
+  src: url("../fonts/gothici.woff2") format("woff2"), url("../fonts/gothici.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 12px 0;
+  height: 100vh;
+  background-color: #1D1D1D;
+}
+
+.memory-game {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+  max-width: 395px;
+  height: 507px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.memory__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 12px;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+}
+
+.memory__header-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.memory-card {
+  position: relative;
+  width: 15%;
+  height: 11%;
+  background: #020B12;
+  border: 1px solid rgba(158, 158, 158, 0.08);
+  border-radius: 12px;
+  margin: 3px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.memory-card.flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.front-face {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  border-radius: 12px;
+  background-color: #F5F5F5;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 12px;
+  background-color: #020B12;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front-face {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+@media (min-width: 736px) {
+  .memory-game {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: auto;
+    max-width: 736px;
+    height: 400px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+
+  .memory-card {
+    position: relative;
+    width: 15%;
+    height: 20%;
+  }
+
+  .memory__header {
+    margin-bottom: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 24px;
+    font-size: 24px;
+  }
+
+  .memory__header-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1200px) {
+  .memory-game {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: auto;
+    max-width: 1200px;
+    height: 600px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+
+  .memory-card {
+    position: relative;
+    width: 9%;
+    height: 16%;
+  }
+
+  .memory__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 24px;
+    font-size: 24px;
+  }
+
+  .memory__header-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1441px) {
+  .memory-game {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: auto;
+    max-width: 1800px;
+    height: 900px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+
+  .memory-card {
+    position: relative;
+    width: 9%;
+    height: 16%;
+  }
+
+  .memory__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 24px;
+    font-size: 24px;
+  }
+
+  .memory__header-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
